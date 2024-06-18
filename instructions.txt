@@ -1,0 +1,26 @@
+In this project dependencies i used are  
+
+1.OS module-for accessing and creating files
+2.Beautifull Soup -for web scraping 
+3.request -module for get requests
+4.syllables module 
+5.Csv module- for converting to csv file 
+
+In the text.py all the text extraction from the url is done ,the article title and article content is extracted using beaturiful soup 
+around half of the websites have the article content in the div-class name 'td-post-content tagdiv-type' and other half have div-class name
+'tdb-block-inner td-fix-index' and i extracted the text from these two div if the first div-class is not present then i would check for the second div-class,and in a loop of urls and i created a file for every url and stored it in the TEXT folder with their URL_id as the file name 
+
+After the extraction is done i created two dict of postive and negative words beacause dict has O(1)loop up time as they are time efficient 
+and i also created a set called stop which has all the stop words converted to lower beacause everything we process is converted to lower 
+
+Rather than using python split() method i thought it would be more efficient to do it raw rather than use function as there are many factors to consider such as ' ','.' etc when processing the data ,i divided the large text into tokens of words based on space and store the words
+aas well a check for the unnecessary symbols in the check list and not consider them .
+
+I considered every line before the full stop as a sentence so i kept track of no of words and sentences using length array and curr_length variable check if the word is present in stop if it is then ignore it and it the word in positive or negative then increase the count. 
+
+And calculated all the other paramters as given in objective document. 
+At last i created a file called ans.csv and write all the data of total 100 Urls into the  ans.csv file.
+
+
+
+                                                   THANK YOU
